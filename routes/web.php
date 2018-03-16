@@ -16,6 +16,8 @@
 });*/
 
 
-Route::get('/register','TicketsController@index');
+Route::get('register','TicketsController@index')->name('register');
 
-Route::get('/list','TicketsController@list');
+Route::get('list','TicketsController@list')->name('list');
+
+Route::post('createTicket','TicketsController@createTicket')->name('createTicket');

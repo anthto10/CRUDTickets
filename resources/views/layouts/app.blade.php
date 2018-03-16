@@ -10,5 +10,8 @@
 </head>
 <body>
     @include('includes.navbar')
+    <div class="container-content">
+        @yield('content')
+    </div>    
 </body>
 </html>
