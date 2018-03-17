@@ -11,13 +11,9 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
-
-Route::get('register','TicketsController@index')->name('register');
-
-Route::get('list','TicketsController@list')->name('list');
-
-Route::post('createTicket','TicketsController@createTicket')->name('createTicket');
+Route::get('/register','TicketsController@index')->name('tickets.register');
+Route::post('/create','TicketsController@create')->name('tickets.create');
+Route::get('/list','TicketsController@list')->name('tickets.list');
+Route::get('/edit/{id}','TicketsController@edit')->name('tickets.edit');
+Route::delete('/{id}','TicketsController@destroy')->name('tickets.destroy');
+Route::match(['put', 'patch'], '/{id}','TicketsController@update')->name('tickets.update');

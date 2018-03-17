@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-12">
                 <h2 class="mb-4">Registrar Tickets</h2>
-                <form method="post" action="{{route('createTicket')}}">
+                <form method="post" action="{{route('tickets.create')}}">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="id_name">Nombre</label>
@@ -12,16 +12,16 @@
                         {!! $errors->first('name','<div class="invalid-feedback">:message</div>') !!}
                     </div>
                     <div class="form-group">
-                        <label for="id_description">Descripción</label>
-                        <textarea class="form-control {!! $errors->first('description','is-invalid') !!}" name="description" id="id_description" rows="3" placeholder="Descripción" value="{{ old('description') }}"></textarea>
+                        <label for="id_description">Descripción</label>                        
+                        <textarea class="form-control {!! $errors->first('description','is-invalid') !!}" name="description" id="id_description" rows="3" placeholder="Descripción">{{old('description')}}</textarea>    
                         {!! $errors->first('description','<div class="invalid-feedback">:message</div>') !!}
                     </div>
                     <div class="form-group">
                         <label for="id_priority">Nivel de Importancia</label>
                         <select class="form-control" id="id_priority" name="priority">
-                            <option selected value="Bajo">Bajo</option>
-                            <option value="Medio">Medio</option>
-                            <option value="Urgente">Urgente</option>
+                            @foreach($priorities as $priority)
+                                <option value="{{$priority->value}}">{{$priority->value}}</option> 
+                            @endforeach 
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary mt-1">Registrar</button>
