@@ -1,0 +1,18 @@
+Instrucciones:
+	1- Descargar el proyecto o clonarlo desde github
+	2- Importar la base de datos y levantar MySQL
+		CarpetadelProyecto/tickets.sql
+	3- En el la carpeta del proyecto ejecutar :
+		composer install
+	4- Cambiar los parametros de la base de datos del archivo:
+		Nombre del BD: tickets
+		CarpetadelProyecto/env
+	5- Generar clave del proyecto
+		php artisan key:generate
+	6- Levantar proyecto
+		php artisan serve
+	7- Servidor levantado en :
+		http://127.0.0.1:8000		
+		Rutas:
+			/register -> Registrar Ticket
+			/list -> Editar,Eliminar,Buscar y Filtrar

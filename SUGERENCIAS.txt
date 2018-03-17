@@ -1,0 +1,12 @@
+SUGERENCIAS:
+	1- Creacion de un login.
+	2- Creación de roles para el sistema: Solicitante, Trabajador, Supervisor.
+	3- Estado de los tickets en tiempo real.
+	4- Supervisor capacidad de editar y eliminar todos los tickets.
+	5- Solicitante y Trabajador editar o eliminar el ticket que genera o se le asigna	
+	6- Agregar otro nivel de importancia a completado, para tener un control de los
+	tickets atendidos y activo para conocer el usuario que esta atendiendo el ticket.
+	7- Creacion de una pantalla donde se vea el estado de los Trabajadores en tiempo real.
+	8- Creacion de diversos tipos de reportes como Tickets completados al mes,
+	Tickets de acuerdo al nivel de prioridad mensual, etc.
+	
